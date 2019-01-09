@@ -1,12 +1,19 @@
-Run the code like this:
+Notes:
+Data is held in tree, raw/cropped train/validation label(left/right) ie data_raw/train/left/img.png
 
-*python face_detect.py abba.png*
+formatting_data.py will iterate through the data_raw, crop faces from the images using cascade and OpenCV and save into the respective folder in data_cropped.
 
-If you want to understand how the code works, the details are here:
+DNN_Face_Orientation.ipynb contains, trains and tests the DNN using the formatted data.
 
-https://realpython.com/blog/python/face-recognition-with-python/
+mouse_control.py uses NirCMD software to control mouse from the command line.
+
+live.py accesses the webcam and detects faces real time. The final step for completion is to import functions from mouse_control.py and DNN_face_orientation.ipynb to estimate face orientation, use some form of integral control and then control mouse velocity/position.
+
+Acknowledgements:
+Face recognition adapted from article written by Shantnu Tiwari https://realpython.com/blog/python/face-recognition-with-python/
+DNN adapted from PyTorch Tutorial - Deep Learning with PyTorch: A 60 Minute Blitz Author: Soumith Chintala
 
 
-Update: Now supports OpenCV3. This change has been made by furetosan ( https://github.com/furetosan) and tested on Linux.
 
-To run the OpenCV3 version, run facedetect_cv3.py.
+Oliver Rose
+@oliverrose1998
